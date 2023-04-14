@@ -8,8 +8,10 @@ export function API({ stack }: StackContext) {
       },
     },
     routes: {
-      "GET /": "packages/functions/target/lambda/get_index",
-      "GET /{id}": "packages/functions/target/lambda/get_index_id",
+      // This path must map to the binaries that are produced after build.
+      // Outlined in ~/packages/functions/Cargo.toml
+      "GET /": "target/lambda/get_index",
+      "GET /{id}": "target/lambda/get_index_id",
     },
   });
   stack.addOutputs({

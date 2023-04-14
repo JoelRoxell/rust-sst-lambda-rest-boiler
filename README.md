@@ -12,20 +12,22 @@ and a lib file using `~/packages/core/Cargo.toml`
 
 > Make sure you have cargo & yarn installed
 
+### Build via SST
+> If you have troubles here try do a `cargo clean` before build
+
+`yarn build`
+
+## Deploy
+
+> Make sure to have proper AWS envs set.
+
+`yarn deploy`
+
+
 ### Remove build Artifacts
 `cargo clean` 
 
 ### Build via cargo
 `cargo build`
 
-### Build via SST
-> If you have troubles here try do a `cargo clean` before build
-
-`yarn sst build`
-
-## Deploy
-
-> Make sure to have proper AWS envs set.
-
-`yarn sst deploy`
 
